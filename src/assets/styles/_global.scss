@@ -1,0 +1,6 @@
+$red: red;
+
+$design-width:750;
+@function vw($n){
+    @return ($n/$design-width)*100vw;
+}
