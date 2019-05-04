@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Header></Header>
+    <Header path="" name="都市传说"></Header>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
   import Header from "ui/header.vue"
   export default {
     components: {
-      Header
+      Header,
     }
   }
 </script>

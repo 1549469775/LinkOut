@@ -4,11 +4,21 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state: {
-        count: 0
+        showAlert: false
+    },
+    getters: {
+        isAlert(state) {
+            return state.showAlert;
+        }
     },
     mutations: {
-        increment(state) {
-            state.count++
+        setAlert(state, show) {
+            state.showAlert = show;
+        }
+    },
+    actions: {
+        setAlert(context, isShow) {
+            context.commit('setAlert', isShow);
         }
     }
 });
