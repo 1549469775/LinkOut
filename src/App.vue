@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Hello 好慢的萨达!</h1>
+    <h1>4阿萨德奥DSA术大师</h1>
     <p>
       <!-- 使用 router-link 组件来导航. -->
       <!-- 通过传入 `to` 属性指定链接. -->
@@ -13,16 +13,16 @@
 </template>
 
 <script>
-// ui表示/src/components/目录
-//_表示loadsh模块
-export default {
-  name: "App",
-  created(){
-    console.log(this.$route);
-    console.log(this.$store);
-    
-  }
-};
+  // ui表示/src/components/目录
+  //_表示loadsh模块
+  export default {
+    name: "App",
+    created() {
+      console.log(this.$route);
+      console.log(this.$store);
+
+    }
+  };
 </script>
 
 

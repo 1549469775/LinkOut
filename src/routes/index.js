@@ -3,14 +3,13 @@ import Vue from 'vue'
 Vue.use(Router);
 
 var routes = [{
-    path: '/',
-    redirect:'/bar',
-    component: ()=>import("ui/header.vue"),
-},
-{
-    path: '/bar',
-    component: ()=>import("ui/list.vue")
-}
+        path: '/home',
+        component: () => import("ui/header.vue"),
+    },
+    {
+        path: '/bar',
+        component: () => import("ui/list.vue")
+    }
 ];
 
 var router = new Router({
