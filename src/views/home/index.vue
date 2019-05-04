@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Header path="" name="都市传说"></Header>
+    <Header path="/bar" name="都市传说"></Header>
   </div>
 </template>
 

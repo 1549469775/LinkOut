@@ -50,7 +50,7 @@ module.exports = {
             babelrc: false, // 不采用.babelrc的配置
             presets: ['@babel/preset-env'],
             plugins: [
-              "dynamic-import-webpack"
+              "@babel/plugin-syntax-dynamic-import"
             ]
           }
         }
