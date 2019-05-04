@@ -13,7 +13,7 @@ module.exports = {
   // entry: {
   //   main: "./src/main.js"
   // },
-  entry:["./src/main.js","webpack-hot-middleware/client?quiet=true"],
+  entry: ["./src/main.js", "webpack-hot-middleware/client?quiet=true"],
   // 出口
   output: {
     // 用于输出文件的文件名chunkhash
@@ -34,8 +34,10 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@': __dirname + '/src',
-      'ui': __dirname + '/src/components',
+      '@': path.resolve(__dirname + '/src'),
+      'ui': path.resolve(__dirname + '/src/components'),
+      'page': path.resolve(__dirname + '/src/views'),
+      'assets': path.resolve(__dirname + '/src/assets'),
     }
   },
   module: {
@@ -53,7 +55,7 @@ module.exports = {
           }
         }
       }, {
-        test: /\.jpg$/,
+        test: /\.(jpg|png|gif)$/,
         use: {
           loader: "file-loader"
         }

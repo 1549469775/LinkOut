@@ -3,8 +3,12 @@ import Vue from 'vue'
 Vue.use(Router);
 
 var routes = [{
-        path: '/home',
-        component: () => import("ui/header.vue"),
+        path: '/',
+        alias: "/home",
+        meta: {
+            keepAlive: false
+        },
+        component: () => import("page/home/index.vue"),
     },
     {
         path: '/bar',

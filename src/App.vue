@@ -1,14 +1,9 @@
 <template>
   <div id="app">
-    <h1>4阿萨德奥DSA术大师</h1>
-    <p>
-      <!-- 使用 router-link 组件来导航. -->
-      <!-- 通过传入 `to` 属性指定链接. -->
-      <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
-      <router-link to="/">Go to /</router-link>
-      <router-link to="/bar">Go to Bar</router-link>
-    </p>
-    <router-view></router-view>
+    <keep-alive>
+      <router-view v-if="$route.meta.keepAlive"></router-view>
+    </keep-alive>
+    <router-view v-if="!$route.meta.keepAlive"></router-view>
   </div>
 </template>
 
@@ -21,7 +16,7 @@
       console.log(this.$route);
       console.log(this.$store);
 
-    }
+    },
   };
 </script>
 

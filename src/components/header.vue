@@ -1,47 +1,48 @@
 <template>
   <header>
-    <div class="button-border">
-      <button class="button">Submit</button>
-    </div>
+    <div class="back" @click="goBack()"></div>
+    <div class="center">LinkOut</div>
   </header>
 </template>
+<script>
+  export default {
+    methods: {
+      goBack() {
+        this.$router.replace("/hhh");
+      },
+    },
+    created() {
+      console.log(123);
 
+      console.log(this.$router);
+
+    },
+  }
+</script>
 <style lang="scss" scoped>
-.button {
-  cursor: pointer;
-  background-color: #c47135;
-  border: none;
-  color: #ffffff;
-  outline: none;
-  padding: 12px 40px 10px;
-  position: relative;
-}
-.button:before,
-.button:after {
-  border: 0 solid transparent;
-  transition: all 0.25s;
-  content: "";
-  height: 24px;
-  position: absolute;
-  width: 24px;
-}
-.button:before {
-  border-top: 2px solid #c47135;
-  left: 0px;
-  top: -5px;
-}
-.button:after {
-  border-bottom: 2px solid #c47135;
-  bottom: -5px;
-  right: 0px;
-}
-.button:hover {
-  background-color: #c47135;
-}
-.button:hover:before,
-.button:hover:after {
-  height: 100%;
-  width: 100%;
-}
+  header {
+    overflow: hidden;
+    height: calc(#{vw(100)} - 1px);
+    line-height: calc(#{vw(100)} - 1px);
+    background: transparent;
+    border-bottom: 1px solid #000;
+    color: #fff;
+    .back {
+      height: vw(50);
+      width: vw(50);
+      //告诉加载器他是一个模块而不是相对路径
+      background-image: url("~assets/images/back.png");
+      //内容区域才有背景图，padding没有
+      background-origin: content-box;
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding: vw(25);
+    }
+    .center {
+      height: 100%;
+      text-align: center;
+      font-size: vw(40);
+    }
+  }
 </style>
 
