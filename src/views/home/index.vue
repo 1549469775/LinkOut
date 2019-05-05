@@ -16,7 +16,6 @@
     },
     methods: {
       alert() {
-        alert.show("游戏即将开始，请做好准备")
       }
     }
   }

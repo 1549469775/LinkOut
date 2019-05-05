@@ -5,9 +5,7 @@
     <div v-else-if="v_type[1]==type" class="left">
       <slot name="left"></slot>
     </div>
-    <transition name="bounce">
-      <div class="center">{{title_name}}</div>
-    </transition>
+    <div class="center">{{title_name}}</div>
   </header>
 </template>
 <script>
@@ -76,14 +74,6 @@
       font-size: vw(40);
       font-weight: bold;
     }
-  }
-
-  .bounce-enter-active,
-  .bounce-leave-active {
-    transition: opacity 0.5s;
-  }
-  .bounce-enter, .bounce-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    opacity: 0;
   }
 </style>
 

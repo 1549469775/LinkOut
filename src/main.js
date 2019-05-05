@@ -11,16 +11,6 @@ Vue.use(VueAwesomeSwiper, /* { default global options } */ );
 
 Vue.config.productionTip = false
 
-window && (window.alert = new(function () {
-  this.show = function (text) {
-    vm.$store.dispatch("alert/show", text);
-  }
-  this.hide = function () {
-    vm.$store.dispatch("alert/hide");
-  }
-}));
-
-
 var vm = new Vue({
   store,
   router,
