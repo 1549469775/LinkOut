@@ -1,7 +1,6 @@
 import Router from 'vue-router'
 import Vue from 'vue'
-import Home from "page/home/index.vue";
-import List from "ui/list.vue";
+
 Vue.use(Router);
 
 const routes = [{
@@ -12,7 +11,7 @@ const routes = [{
             //刚刷新时可能没有，但是在挂载玩之后就有了
             keepAlive: true
         },
-        component: () => import("page/home/index.vue")
+        component: () => import("views/home/index.vue")
     },
     {
         path: '/bar',
