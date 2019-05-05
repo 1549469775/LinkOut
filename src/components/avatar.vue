@@ -28,6 +28,7 @@
     width: 100%;
     height: 100%;
     position: relative;
+    animation: run-circle 10s infinite linear;
     &.circle {
       border-radius: 50%;
     }
@@ -38,6 +39,15 @@
       transform: translate(-50%, -50%);
       width: auto;
       height: 100%;
+    }
+  }
+
+  @keyframes run-circle {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
     }
   }
 </style>

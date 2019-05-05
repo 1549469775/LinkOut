@@ -1,8 +1,8 @@
 <template>
   <header>
-    <div v-if="_type[0]==type" class="back" @click="goBack()">
+    <div v-if="v_type[0]==type" class="back" @click="goBack()">
     </div>
-    <div v-else-if="_type[1]==type" class="left">
+    <div v-else-if="v_type[1]==type" class="left">
       <slot name="left"></slot>
     </div>
     <transition name="bounce">
@@ -15,7 +15,7 @@
     props: ["type", "path", "name"],
     data() {
       return {
-        _type: ["back", 'custom']
+        v_type: ["back", 'custom']
       }
     },
     computed: {

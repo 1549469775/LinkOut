@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Header type="custom" path="/bar" name="大仙显灵">
-      <Avatar slot="left" circle></Avatar>
+      <Avatar @click.native="alert" circle slot="left"></Avatar>
     </Header>
   </div>
 </template>
@@ -12,7 +12,12 @@
   export default {
     components: {
       Header,
-      Avatar
+      Avatar,
+    },
+    methods: {
+      alert() {
+        alert.show("游戏即将开始，请做好准备")
+      }
     }
   }
 </script>
