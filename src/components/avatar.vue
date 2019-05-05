@@ -25,8 +25,8 @@
 <style lang="scss" scoped>
   .avatar {
     overflow: hidden;
-    width: vw(100);
-    height: vw(100);
+    width: 100%;
+    height: 100%;
     position: relative;
     &.circle {
       border-radius: 50%;

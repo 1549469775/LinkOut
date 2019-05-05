@@ -1,6 +1,10 @@
 <template>
   <header>
-    <div v-if="back_path" class="back" @click="goBack()"></div>
+    <div v-if="_type[0]==type" class="back" @click="goBack()">
+    </div>
+    <div v-else-if="_type[1]==type" class="left">
+      <slot name="left"></slot>
+    </div>
     <transition name="bounce">
       <div class="center">{{title_name}}</div>
     </transition>
@@ -8,13 +12,16 @@
 </template>
 <script>
   export default {
-    props: ["path", "name"],
+    props: ["type", "path", "name"],
     data() {
       return {
-
+        _type: ["back", 'custom']
       }
     },
     computed: {
+      header_type() {
+        return this.type;
+      },
       back_path() {
         return this.path;
       },
@@ -38,6 +45,18 @@
     background: transparent;
     border-bottom: 1px solid #dad9d9;
     color: #000;
+    .left {
+      width: calc(#{vw(100)} - 1px);
+      height: calc(#{vw(100)} - 1px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      padding: vw(10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     .back {
       position: absolute;
       top: 0;

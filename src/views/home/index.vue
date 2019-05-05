@@ -1,7 +1,8 @@
 <template>
   <div class="home">
-    <Header path="/bar" name="大仙显灵"></Header>
-    <Avatar circle></Avatar>
+    <Header type="custom" path="/bar" name="大仙显灵">
+      <Avatar slot="left" circle></Avatar>
+    </Header>
   </div>
 </template>
 
