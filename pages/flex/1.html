@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 1.   强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览。 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- 2.   WebApp全屏模式   隐藏地址栏。 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 禁止百度转码显示。 -->
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <!-- 制定iphone中safari顶端的状态条的样式（default:白色，black:黑色，black-translucent：半透明） -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="default-translucent">
+  <!-- 添加到IOS主屏后的标题。 -->
+  <meta name="apple-mobile-web-app-title" content="标题名称">
+  <title>da </title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .boxs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    height: 400px;
+  }
+
+  .block {
+    /* width: calc(100% / 4); */
+    width: 100%;
+    height: 100px;
+  }
+
+  .red {
+    background-color: red;
+  }
+
+  .green {
+    background-color: green;
+  }
+
+  .pink {
+    background-color: pink;
+  }
+
+  .blue {
+    background-color: blue;
+  }
+</style>
+
+<body>
+  <div class="boxs">
+    <div class="block red" style="height: 50px; order: 2;">
+      1
+    </div>
+    <div class="block green" style="height: 40px; order: 1;">
+      2
+    </div>
+    <div class="block pink" style="height: 80px; order: 3;">
+      3
+    </div>
+    <div class="block blue" style="height: 100px; order: 4;">
+      4
+    </div>
+  </div>
+</body>
+
+</html>
