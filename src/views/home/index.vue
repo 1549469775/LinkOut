@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Header type="custom" path="/bar" name="大仙显灵">
-      <Avatar @click.native="alert" circle slot="left"></Avatar>
+      <Avatar @click.native="go" circle slot="left"></Avatar>
     </Header>
   </div>
 </template>
@@ -17,6 +17,9 @@
     methods: {
       alert() {
         alert.show("游戏即将开始，请做好准备")
+      },
+       go() {
+        this.$router.push({name:"bar"})
       }
     }
   }

@@ -14,6 +14,7 @@ const routes = [{
         component: () => import("views/home/index.vue")
     },
     {
+        name:"bar",
         path: '/bar',
         meta: {
             keepAlive: true

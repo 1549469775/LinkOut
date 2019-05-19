@@ -1,0 +1,51 @@
+/***/
+
+/* harmony import */
+
+/* hot reload */
+
+/* harmony default export */
+
+// Imports
+
+// Module
+
+// EXTERNAL MODULE: ./src/components/header.vue
+
+// EXTERNAL MODULE: ./src/components/avatar.vue
+
+// CONCATENATED MODULE: ./src/views/home/index.vue?vue&type=script&lang=js&
+
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/views/home/index.vue?vue&type=template&id=5954443c&scoped=true&
+
+// CONCATENATED MODULE: ./src/views/home/index.vue?vue&type=template&id=5954443c&scoped=true&
+
+/* concated harmony reexport render */
+
+/* concated harmony reexport staticRenderFns */
+
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/header.vue?vue&type=script&lang=js&
+
+//
+
+// CONCATENATED MODULE: ./src/components/header.vue?vue&type=script&lang=js&
+
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/header.vue?vue&type=template&id=29e8c3c6&scoped=true&
+
+// CONCATENATED MODULE: ./src/components/header.vue?vue&type=template&id=29e8c3c6&scoped=true&
+
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/avatar.vue?vue&type=script&lang=js&
+
+// CONCATENATED MODULE: ./src/components/avatar.vue?vue&type=script&lang=js&
+
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/avatar.vue?vue&type=template&id=5d2536e9&scoped=true&
+
+// CONCATENATED MODULE: ./src/components/avatar.vue?vue&type=template&id=5d2536e9&scoped=true&
+
+/*#__PURE__*/
+
+// If url is already wrapped in quotes, remove them
+
+// Should url be wrapped?
+
+// See https://drafts.csswg.org/css-values-3/#urls

@@ -1,0 +1,35 @@
+/***/
+
+/* harmony import */
+
+/* hot reload */
+
+/* harmony default export */
+
+// Module
+
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/list.vue?vue&type=script&lang=js&
+
+//
+
+// some swiper options/callbacks
+
+// 所有的参数同 swiper 官方 api 参数
+
+// ...
+
+// current swiper instance
+
+// 然后你就可以使用当前上下文内的swiper对象去做你想做的事了
+
+// CONCATENATED MODULE: ./src/components/list.vue?vue&type=script&lang=js&
+
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/list.vue?vue&type=template&id=227179ae&scoped=true&
+
+// CONCATENATED MODULE: ./src/components/list.vue?vue&type=template&id=227179ae&scoped=true&
+
+/* concated harmony reexport render */
+
+/* concated harmony reexport staticRenderFns */
+
+/*#__PURE__*/
