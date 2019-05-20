@@ -16,7 +16,10 @@ module.exports = {
   // entry: {
   //   main: "./src/main.js"
   // },
-  entry: ["./src/main.js"],
+  entry: {
+    main: "./src/main.js",
+    vendor: ['vue', 'vue-router', 'vuex']
+  },
   // 出口
   output: {
     // 用于输出文件的文件名chunkhash
@@ -140,16 +143,24 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: '/css/[name].css',
-      chunkFilename: '/css/[id].css',
+      filename: 'css/[name].css',
+      chunkFilename: 'css/[id].css',
     }),
     // OccurrenceOrderPlugin is needed for webpack 1.x only
     new webpack.optimize.OccurrenceOrderPlugin(),
     // 模块热替换插件(hmr)永远不要在生产环境(production)下启用 HMR
-    new webpack.HotModuleReplacementPlugin({multiStep:true}),
+    new webpack.HotModuleReplacementPlugin({
+      multiStep: true
+    }),
     // Use NoErrorsPlugin for webpack 1.x
     // 在编译出现错误时，使用 NoEmitOnErrorsPlugin 来跳过输出阶段。
     new webpack.NoEmitOnErrorsPlugin(),
+    // 该插件会根据模块的相对路径生成一个四位数的hash作为模块id, 建议用于生产环境
+    // new webpack.HashedModuleIdsPlugin({
+    //   hashFunction: 'sha256', //散列算法，默认为 'md5'
+    //   hashDigest: 'hex', //在生成 hash 时使用的编码方式，默认为 'base64'
+    //   hashDigestLength: 20 //散列摘要的前缀长度，默认为 4。
+    // }),
     // 浏览器同步插件
     new BrowserSyncPlugin({
       host: 'localhost',
@@ -167,7 +178,7 @@ module.exports = {
   //性能
   //去除某警告
   performance: {
-    // 打开/关闭提示
+    // 打开/关闭提示q
     hints: "warning",
     // 此选项控制webpack何时根据单个资产大小发出性能提示
     maxAssetSize: 100000, // 整数类型（以字节为单位）30000000
@@ -213,5 +224,9 @@ module.exports = {
       }),
       new OptimizeCssAssetsPlugin({})
     ]
+  },
+  externals: {
+    // 外部扩展，例如cdn获取的外部依赖库
+    //  jquery:"jQuery" 
   }
 }
